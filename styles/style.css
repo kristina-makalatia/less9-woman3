@@ -1,0 +1,115 @@
+/* header styles */
+.nav-ul {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+header {
+    padding: 30px;
+}
+.nav-a::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    left:0;
+    bottom:0;
+    background-color: blue;
+    transition: all 2s;
+}
+.nav-a {
+    position: relative;
+}
+.nav-a:hover::after {
+    width: 70%;
+}
+
+
+.text {
+    color:red;
+    opacity: 60%;
+}
+.image-test {
+    width: 700px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* background image styles */
+.bg-image {
+    background-image: url('../images/Landscape-Color.jpg');
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-image::before {
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: inline-block;
+    opacity: 60%;
+}
+
+
+
+/* about page */
+.about-image {
+    background-image: url('https://thumbs.dreamstime.com/b/beautiful-spring-blossom-greeting-card-gerbera-close-up-156496245.jpg');
+    width: 100vw;
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+
+/* pseudo elements */
+.hello::before {
+    content:  'Good Morning';
+    color:red;
+    font-size: 35px;
+}
+/* .hello::after {
+    content: '';
+    background-color:blue;
+    width: 1px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 30px;
+} */
+.hello::after {
+    content: '\00a9';
+}
+
+/* pseudo classes */
+.wraper {
+    display: flex;
+    justify-content: space-between;
+}
+.box {
+    width: 200px;
+    height: 200px;
+}
+.box:nth-child(1) {
+    background-color: red;
+}
+.box:nth-child(2) {
+    background-color: yellow;
+}
+.box:nth-child(3) {
+    background-color: blue;
+}
+.box:nth-child(4) {
+    background-color: pink;
+}
+.box:nth-child(3) .p-box {
+    color:#fff;
+}
+
+/* .box:nth-child(even) {
+    background-color: lightblue;
+}
+.box:nth-child(odd) {
+    background-color: lawngreen;
+} */
